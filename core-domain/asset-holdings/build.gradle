@@ -1,0 +1,5 @@
+dependencies {
+    implementation project(':shared:asset')
+    implementation project(':core-domain:community')
+    implementation project(':supporting-domain:user')
+}

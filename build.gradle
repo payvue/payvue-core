@@ -1,0 +1,131 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.23'
+}
+
+allprojects {
+    group = projectGroup
+    version = projectVersion
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'org.jetbrains.kotlin.jvm'
+
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(javaVersion)
+        }
+    }
+
+    kotlin {
+        jvmToolchain {
+            languageVersion.set(JavaLanguageVersion.of(javaVersion))
+        }
+    }
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "${javaVersion}"
+            freeCompilerArgs += [
+                "-Xjvm-default=all",
+                "-Xjsr305=strict"
+            ]
+        }
+    }
+
+    dependencies {
+
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+        testImplementation "org.junit.jupiter:junit-jupiter:5.10.2"
+        testImplementation "org.assertj:assertj-core:3.25.3"
+        testImplementation "io.kotest:kotest-runner-junit5:5.8.0"
+        testImplementation "io.kotest:kotest-assertions-core:5.8.0"
+        testImplementation "io.kotest:kotest-property:5.8.0"
+
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+        implementation "org.jetbrains.kotlin:kotlin-reflect"
+
+    }
+
+    test {
+        useJUnitPlatform()
+
+        def testProfile = findProperty('test.profile') ?: 'all'
+        switch (testProfile) {
+            case 'domain':
+                systemProperty 'kotest.tags', 'DomainTest'
+                break
+            case 'fast':
+                systemProperty 'kotest.tags.exclude', 'SlowTest'
+                break
+            case 'ci':
+                systemProperty 'kotest.tags', 'DomainTest'
+                systemProperty 'kotest.tags.exclude', 'SlowTest'
+                break
+            case 'all':
+            default:
+                break
+        }
+
+        testLogging {
+            events "passed", "skipped", "failed"
+            exceptionFormat "full"
+            showStandardStreams = false
+        }
+    }
+}
+
+configure(subprojects.findAll {
+    !it.path.startsWith(':shared:')
+}) {
+    dependencies {
+        implementation project(":shared:common")
+        testImplementation project(":shared:common")
+    }
+}
+
+// ============================================================
+// 도메인별 특화 테스트 설정
+// ============================================================
+configure(subprojects.findAll { it.path.startsWith(':core-domain:') }) {
+
+    test {
+        testLogging {
+            showStandardStreams = true
+            events "passed", "skipped", "failed", "standardOut", "standardError"
+        }
+
+        failFast = false
+    }
+}
+
+configure(subprojects.findAll { it.path.startsWith(':supporting-domain:') }) {
+    test {
+
+    }
+}
+
+configure(subprojects.findAll { it.path.startsWith(':generic-subdomain:') }) {
+    test {
+        def excludeExternal = findProperty('test.excludeExternal') ?: 'false'
+        if (excludeExternal == 'true') {
+            systemProperty 'kotest.tags.exclude', 'RequiresExternalService'
+        }
+    }
+}
+
+configure(subprojects.findAll { it.path.startsWith(':shared:') }) {
+    test {
+        maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    }
+}

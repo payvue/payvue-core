@@ -1,0 +1,9 @@
+dependencies {
+    // Shared Kernel
+    implementation project(':shared:asset')
+    
+    // Core Domains
+    implementation project(':shared:community')
+    implementation project(':core-domain:asset-holdings')
+    implementation project(':core-domain:transaction')
+}

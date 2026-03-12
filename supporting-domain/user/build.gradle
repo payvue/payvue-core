@@ -1,0 +1,4 @@
+dependencies {
+    // Shared Asset
+    implementation project(':shared:asset')
+}

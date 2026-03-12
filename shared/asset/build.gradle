@@ -1,0 +1,3 @@
+dependencies {
+    // Shared Asset has no module dependencies
+}

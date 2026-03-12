@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+// JVM 21로 통일
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "21"
+        freeCompilerArgs += [
+            "-Xjvm-default=all",
+            "-Xjsr305=strict"
+        ]
+    }
+}
+
+dependencies {
+    // Kotest (테스트 Tag용)
+    api "io.kotest:kotest-runner-junit5:5.8.0"
+    api "io.kotest:kotest-assertions-core:5.8.0"
+    
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+}

@@ -1,0 +1,23 @@
+rootProject.name = 'payvue-core'
+
+// Shared
+include ':shared:asset'
+include ':shared:common'
+
+// Core Domain
+include ':core-domain:community'
+include ':core-domain:asset-holdings'
+include ':core-domain:transaction'
+include ':core-domain:relation'
+
+// Supporting Domain
+include ':supporting-domain:user'
+include ':supporting-domain:smartstore'
+include ':supporting-domain:interaction'
+
+// Generic SubDomain
+include ':generic-sub-domain:alarm'
+include ':generic-sub-domain:payment'
+
+// Shared
+include ':shared:community'
