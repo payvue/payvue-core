@@ -101,8 +101,6 @@ Generic Subdomain은 서비스에 필요하지만 Payvue만의 문제는 아닌 
 
 Shared 영역은 중복 제거를 위한 잡다한 유틸리티 모음이 아닙니다. `shared:common`은 `AggregateRoot`, `DomainEvent`, 식별 계약과 실행·참여 상태처럼 도메인 모델이 공통으로 사용하는 기반을 제공하고, `shared:asset`은 `Money`와 `AssetCharacteristic`, `Acquirable`, `Consumable`, `HasBalance`, `Ownable`처럼 자산을 설명하는 공통 언어를 제공합니다. 공유 타입이 커질수록 컨텍스트가 함께 변경되어야 하므로, 의미가 안정적이고 실제로 공동 소유해야 하는 타입만 이 경계에 둡니다.
 
-을 거치며 발전다이어그램과 현재 코드의 차이
-
 다이어그램은 모델링 당시의 설계 스냅샷이고, 저장소는 그 모델이 구현과 검증한 현재 상태입니다. 그림의 `Notification Context`는 현재 `alarm` 모듈로 표현되고, `Holding`은 `asset-holdings`의 `Holdings`로 구체화되었습니다. 현재 코드에는 그림보다 구체적인 `transaction` Core Domain이 존재하며, 그림의 `Transferable`·`Exchangeable` 중심 자산 특성은 현재 `Acquirable`·`Consumable`·`HasBalance`·`Ownable` 계약으로 정리되어 있습니다. 따라서 그림은 경계와 협력의 설계 의도를 설명하고, 아래 모듈 목록과 실제 소스는 현재 구현을 설명하는 기준으로 함께 읽어야 합니다.
 
 ### 5. 인증 컨텍스트 모델링
