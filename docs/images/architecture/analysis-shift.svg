@@ -1,0 +1,124 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="210" y1="60" x2="1390" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5FF"/>
+      <stop offset="0.58" stop-color="#F1EBFF"/>
+      <stop offset="1" stop-color="#ECE7FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="220" y1="220" x2="1380" y2="740" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.34"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#7C3AED" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto">
+      <path d="M0 0L11 5.5L0 11V0Z" fill="#8B5CF6" fill-opacity="0.74"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1300" cy="122" rx="228" ry="92" fill="#DDD6FE" fill-opacity="0.72"/>
+  <ellipse cx="254" cy="790" rx="290" ry="114" fill="#E9D5FF" fill-opacity="0.4"/>
+
+  <rect x="120" y="100" width="1360" height="700" rx="34" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="172" y="166" fill="#6D28D9" font-size="32" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    소프트웨어 분석 관점 전환
+  </text>
+  <text x="172" y="200" fill="#6B7280" font-size="19" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    기능 중심 분해에서 변경 중심 모듈 경계 탐색으로
+  </text>
+
+  <rect x="160" y="238" width="380" height="500" rx="20" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="190" y="286" fill="#7C3AED" font-size="24" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    분석 출발점
+  </text>
+
+  <rect x="188" y="314" width="324" height="170" rx="14" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="212" y="352" fill="#6D28D9" font-size="22" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    상향식 분석
+  </text>
+  <text x="212" y="386" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    화면 · 버튼 · API에서 출발
+  </text>
+  <text x="212" y="414" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    구현 결과를 보고 의도를 역추론
+  </text>
+
+  <rect x="188" y="506" width="324" height="170" rx="14" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="212" y="544" fill="#6D28D9" font-size="22" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    하향식 분석
+  </text>
+  <text x="212" y="578" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    목적 · 상위 요구사항에서 출발
+  </text>
+  <text x="212" y="606" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    책임과 기능을 단계적으로 분해
+  </text>
+
+  <rect x="610" y="238" width="340" height="500" rx="20" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="640" y="286" fill="#7C3AED" font-size="24" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    기능 분해 한계
+  </text>
+
+  <rect x="638" y="324" width="284" height="102" rx="12" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="660" y="362" fill="#6D28D9" font-size="20" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    1) 실행 절차 고정
+  </text>
+  <text x="660" y="390" fill="#4B5563" font-size="16" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    요구사항 변경에 취약
+  </text>
+
+  <rect x="638" y="446" width="284" height="102" rx="12" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="660" y="484" fill="#6D28D9" font-size="20" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    2) 데이터 변화 취약
+  </text>
+  <text x="660" y="512" fill="#4B5563" font-size="16" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    구조 변경 시 영향 범위 확대
+  </text>
+
+  <rect x="638" y="568" width="284" height="102" rx="12" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="660" y="606" fill="#6D28D9" font-size="20" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    3) 비즈니스/UI 결합
+  </text>
+  <text x="660" y="634" fill="#4B5563" font-size="16" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    책임 경계가 흐려짐
+  </text>
+
+  <rect x="1020" y="238" width="420" height="500" rx="20" fill="#FFFFFF" stroke="url(#accent)" stroke-width="2"/>
+  <text x="1050" y="286" fill="#7C3AED" font-size="24" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    설계 초점 전환
+  </text>
+  <text x="1050" y="334" fill="#5B21B6" font-size="30" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    기능 중심 → 변경 중심
+  </text>
+
+  <rect x="1050" y="366" width="360" height="102" rx="12" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="1074" y="406" fill="#6D28D9" font-size="19" font-family="IBM Plex Sans KR, sans-serif" font-weight="600">
+    어떤 개념이 함께 변경되는가
+  </text>
+  <text x="1074" y="434" fill="#4B5563" font-size="16" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    변경 이유를 경계 기준으로 사용
+  </text>
+
+  <rect x="1050" y="484" width="360" height="102" rx="12" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="1074" y="524" fill="#6D28D9" font-size="19" font-family="IBM Plex Sans KR, sans-serif" font-weight="600">
+    어떤 책임이 같은 맥락에서 움직이는가
+  </text>
+  <text x="1074" y="552" fill="#4B5563" font-size="16" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    모듈 경계와 협력 구조를 정리
+  </text>
+
+  <rect x="1050" y="612" width="360" height="90" rx="12" fill="#FBFAFF" stroke="#C4B5FD"/>
+  <text x="1074" y="650" fill="#6D28D9" font-size="18" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    도메인 비전 선언문 작성
+  </text>
+  <text x="1074" y="678" fill="#6B7280" font-size="15" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    판단 기준점 확립 → 모듈 경계 식별
+  </text>
+
+  <line x1="540" y1="490" x2="606" y2="490" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="950" y1="490" x2="1008" y2="490" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1228" y1="588" x2="1228" y2="610" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrow)"/>
+</svg>
