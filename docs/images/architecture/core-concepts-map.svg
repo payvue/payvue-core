@@ -1,0 +1,89 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="220" y1="70" x2="1380" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5FF"/>
+      <stop offset="0.58" stop-color="#F1EBFF"/>
+      <stop offset="1" stop-color="#ECE7FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="250" y1="230" x2="1350" y2="740" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.34"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#7C3AED" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1295" cy="120" rx="230" ry="92" fill="#DDD6FE" fill-opacity="0.72"/>
+  <ellipse cx="260" cy="792" rx="286" ry="112" fill="#E9D5FF" fill-opacity="0.4"/>
+
+  <rect x="130" y="106" width="1340" height="688" rx="34" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="190" y="174" fill="#6D28D9" font-size="32" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    핵심 도메인 개념 정리
+  </text>
+  <text x="190" y="210" fill="#6B7280" font-size="19" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    네 가지 도메인과 각 도메인의 설명을 한눈에 확인할 수 있는 요약 카드
+  </text>
+
+  <rect x="188" y="248" width="584" height="240" rx="20" fill="#FBFAFF" stroke="url(#accent)" stroke-width="2"/>
+  <text x="222" y="302" fill="#7C3AED" font-size="33" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">그룹</text>
+  <text x="222" y="342" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    그룹은 관계와 책임이 형성되는 기본 단위입니다.
+  </text>
+  <text x="222" y="372" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    결제, 자산 관리, 스토어 활동은
+  </text>
+  <text x="222" y="402" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    특정 그룹의 맥락 안에서 이루어지며,
+  </text>
+  <text x="222" y="432" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    활동 규칙과 역할을 해석하는 기준이 됩니다.
+  </text>
+
+  <rect x="830" y="248" width="584" height="240" rx="20" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="864" y="302" fill="#7C3AED" font-size="33" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">결제</text>
+  <text x="864" y="342" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    결제는 개인이나 그룹의 의사결정이
+  </text>
+  <text x="864" y="372" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    실제 경제적 행위로 나타나는 사건입니다.
+  </text>
+  <text x="864" y="402" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    단순한 금전 이동이 아니라,
+  </text>
+  <text x="864" y="432" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    규칙과 합의 과정을 통해 발생하는 행동입니다.
+  </text>
+
+  <rect x="188" y="518" width="584" height="240" rx="20" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="222" y="572" fill="#7C3AED" font-size="33" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">자산</text>
+  <text x="222" y="612" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    자산은 결제와 의사결정의 결과로 남는
+  </text>
+  <text x="222" y="642" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    가치의 상태입니다.
+  </text>
+  <text x="222" y="672" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    이 상태는 이후의 활동과 의사결정에 영향을 미치며,
+  </text>
+  <text x="222" y="702" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    그룹 내 다양한 상호작용의 기반이 됩니다.
+  </text>
+
+  <rect x="830" y="518" width="584" height="240" rx="20" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="864" y="572" fill="#7C3AED" font-size="33" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">스토어</text>
+  <text x="864" y="612" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    스토어는 그룹을 중심으로 형성되는
+  </text>
+  <text x="864" y="642" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    활동 공간입니다.
+  </text>
+  <text x="864" y="672" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    그룹 구성원이 자산으로 상품이나 가치를
+  </text>
+  <text x="864" y="702" fill="#4B5563" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    교환할 수 있도록 하는 구조입니다.
+  </text>
+</svg>

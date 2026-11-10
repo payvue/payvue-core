@@ -1,0 +1,103 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="220" y1="70" x2="1380" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5FF"/>
+      <stop offset="0.58" stop-color="#F1EBFF"/>
+      <stop offset="1" stop-color="#ECE7FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="210" y1="230" x2="1390" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.34"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#7C3AED" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto">
+      <path d="M0 0L11 5.5L0 11V0Z" fill="#8B5CF6" fill-opacity="0.82"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1298" cy="122" rx="230" ry="94" fill="#DDD6FE" fill-opacity="0.72"/>
+  <ellipse cx="262" cy="792" rx="286" ry="112" fill="#E9D5FF" fill-opacity="0.4"/>
+
+  <rect x="130" y="106" width="1340" height="688" rx="34" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="190" y="174" fill="#6D28D9" font-size="32" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">
+    결제 승인/거절 시나리오
+  </text>
+  <text x="190" y="210" fill="#6B7280" font-size="19" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    구조 중심 다이어그램: 요청 → 검증 → 예외 → 판단 → 승인/거절 → 사건 고정
+  </text>
+
+  <rect x="170" y="260" width="1260" height="430" rx="20" fill="#FBFAFF" stroke="url(#accent)" stroke-width="2"/>
+
+  <circle cx="270" cy="390" r="56" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <circle cx="270" cy="378" r="11" stroke="#6D28D9" stroke-width="2"/>
+  <path d="M253 404C256 394 263 389 270 389C277 389 284 394 287 404" stroke="#6D28D9" stroke-width="2" stroke-linecap="round"/>
+  <text x="238" y="468" fill="#6D28D9" font-size="18" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">요청</text>
+
+  <line x1="326" y1="390" x2="444" y2="390" stroke="#8B5CF6" stroke-width="2.6" marker-end="url(#arrow)"/>
+
+  <circle cx="500" cy="390" r="56" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <path d="M500 356L518 364V380C518 392 510 401 500 407C490 401 482 392 482 380V364L500 356Z" stroke="#6D28D9" stroke-width="2" fill="none"/>
+  <path d="M492 381L497 386L507 375" stroke="#6D28D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="455" y="468" fill="#6D28D9" font-size="18" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">규칙 검증</text>
+
+  <line x1="556" y1="390" x2="674" y2="390" stroke="#8B5CF6" stroke-width="2.6" marker-end="url(#arrow)"/>
+
+  <circle cx="730" cy="390" r="56" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <path d="M711 412L730 376L749 412H711Z" stroke="#6D28D9" stroke-width="2" fill="none"/>
+  <line x1="730" y1="386" x2="730" y2="398" stroke="#6D28D9" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="730" cy="404" r="1.8" fill="#6D28D9"/>
+  <text x="694" y="468" fill="#6D28D9" font-size="18" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">예외 확인</text>
+
+  <line x1="786" y1="390" x2="884" y2="390" stroke="#8B5CF6" stroke-width="2.6" marker-end="url(#arrow)"/>
+
+  <polygon points="884,390 964,310 1044,390 964,470" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2.5"/>
+  <text x="956" y="387" fill="#6D28D9" font-size="28" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">?</text>
+  <text x="916" y="495" fill="#6D28D9" font-size="18" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">판단</text>
+
+  <line x1="1044" y1="390" x2="1144" y2="390" stroke="#8B5CF6" stroke-width="2.6" marker-end="url(#arrow)"/>
+  <text x="1048" y="374" fill="#5B21B6" font-size="14" font-family="IBM Plex Sans KR, sans-serif" font-weight="600">예</text>
+
+  <circle cx="1200" cy="390" r="50" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <circle cx="1200" cy="390" r="11" stroke="#16A34A" stroke-width="2"/>
+  <path d="M1195 390L1199 394L1207 386" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1178" y="462" fill="#16A34A" font-size="18" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">승인</text>
+
+  <line x1="964" y1="470" x2="964" y2="540" stroke="#8B5CF6" stroke-width="2.6" marker-end="url(#arrow)"/>
+  <text x="976" y="510" fill="#5B21B6" font-size="14" font-family="IBM Plex Sans KR, sans-serif" font-weight="600">아니오</text>
+
+  <circle cx="860" cy="560" r="50" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <circle cx="860" cy="560" r="11" stroke="#DC2626" stroke-width="2"/>
+  <path d="M855 555L865 565M865 555L855 565" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
+  <text x="838" y="632" fill="#DC2626" font-size="18" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">거절</text>
+
+  <line x1="1250" y1="390" x2="1370" y2="390" stroke="#8B5CF6" stroke-width="2.6"/>
+  <line x1="1370" y1="390" x2="1370" y2="560" stroke="#8B5CF6" stroke-width="2.6" marker-end="url(#arrow)"/>
+  <line x1="910" y1="560" x2="1312" y2="560" stroke="#8B5CF6" stroke-width="2.6" marker-end="url(#arrow)"/>
+
+  <rect x="430" y="500" width="330" height="154" rx="12" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="452" y="530" fill="#7C3AED" font-size="15" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">판단 기준</text>
+  <text x="452" y="558" fill="#4B5563" font-size="13.5" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    - 필수 승인자(역할)가 모두 동의했는가?
+  </text>
+  <text x="452" y="584" fill="#4B5563" font-size="13.5" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    - 자동 승인 규칙에 해당하는가?
+  </text>
+  <text x="452" y="610" fill="#4B5563" font-size="13.5" font-family="IBM Plex Sans KR, sans-serif" font-weight="500">
+    - 예외 조건(한도 초과, 목적 불일치 등)은 없는가?
+  </text>
+  <line x1="760" y1="520" x2="924" y2="470" stroke="#A78BFA" stroke-width="1.8" stroke-dasharray="4 4"/>
+
+  <circle cx="1370" cy="560" r="58" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <ellipse cx="1370" cy="548" rx="11" ry="5" stroke="#6D28D9" stroke-width="2"/>
+  <path d="M1359 548V571C1359 574 1364 577 1370 577C1376 577 1381 574 1381 571V548" stroke="#6D28D9" stroke-width="2"/>
+  <text x="1324" y="640" fill="#6D28D9" font-size="17" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">사건 고정</text>
+
+  <rect x="170" y="720" width="1260" height="52" rx="12" fill="#FBFAFF" stroke="url(#accent)" stroke-width="2"/>
+  <text x="200" y="755" fill="#5B21B6" font-size="20" font-family="IBM Plex Sans KR, sans-serif" font-weight="600">
+    비전 연결: 결제는 항상 합의와 규칙에 의해 설명 가능해야 한다
+  </text>
+</svg>
